@@ -1,0 +1,19 @@
+[package]
+name = "lua-tiktoken"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+luajit = ["mlua/luajit"]
+
+[lib]
+name = "tiktoken"
+crate-type = ["cdylib"]
+
+[dependencies]
+anyhow = "1.0.76"
+mlua = { version = "0.9.2", features = ["module", "send", "luajit"] }
+tiktoken-rs = "0.5.7"
+
+[profile.release]
+strip = true
