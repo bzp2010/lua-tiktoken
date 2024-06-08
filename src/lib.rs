@@ -1,4 +1,4 @@
-use mlua::{prelude::*, Lua};
+use mlua::prelude::*;
 
 mod tiktoken;
 
